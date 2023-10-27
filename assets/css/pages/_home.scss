@@ -1,0 +1,397 @@
+// Home Page SCSS here
+
+.heroHome-section {
+    background-color: rgba($primary-500, 30%);
+    border-radius: 0 0 40px 40px;
+    z-index: 10;
+    & .people {
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1319px;
+        height: 703px;
+        margin-top: 15px;
+        @include tablet {
+            width: 341px;
+            height: 640px;
+            margin-top: 35px;
+        }
+    }
+    & .curves {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+        }
+        &::before {
+            width: 2074px;
+            height: 2074px;
+            background-color: rgba($white, 14%);
+            left: 50%;
+            transform: translateX(-50%);
+            margin-left: -629px;
+            top: 376px;
+            @include tablet {
+                width: 754px;
+                height: 754px;
+                margin-left: -79px;
+                top: 453px;
+            }
+        }
+        &::after {
+            width: 2074px;
+            height: 2074px;
+            background-color: rgba($white, 20%);
+            right: 50%;
+            transform: translateX(50%);
+            margin-right: -407px;
+            top: 753px;
+            @include tablet {
+                width: 903px;
+                height: 903px;
+                margin-right: -277px;
+                top: 383px;
+            }
+        }
+    }
+    & .block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 800px;
+        justify-content: center;
+        padding-top: 84px;
+        @include tablet {
+            height: 741px;
+            padding-top: 44px;
+        }
+        & .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 646px;
+            width: 100%;
+            @include tablet {
+                max-width: 345px;
+            }
+            & h1 {
+                margin-bottom: 24px;
+                @include tablet {
+                    margin-bottom: 12px;
+                }
+            }
+            & h6 {
+                margin-bottom: 24px;
+                @include tablet {
+                    margin-bottom: 16px;
+                }
+            }
+             
+        }
+    }
+}
+
+ .unlock-section {
+    padding: 260px 0 128px;
+    @include laptop {
+        padding: 200px 0 90px;
+    }
+    @include tablet {
+        padding: 106px 0 45px;
+    }
+    & .block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 16px;
+        & .h3 {
+            max-width: 580px;
+        }
+        & .h4 {
+            max-width: 790px;
+            font-weight: 400;
+            color: $gray-600;
+            @include tablet {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+ }
+
+.why-section {
+    padding: 120px 0;
+    @include laptop {
+        padding: 80px 0;
+    }
+    @include tablet {
+        padding: 45px 0;
+    }
+    & .block {
+        display: flex;
+        gap: 32px;
+        border-radius: 24px;
+        background-color: $white;
+        justify-content: space-between;
+        overflow: hidden;
+        box-shadow: 0 4.030873775482178px 4.417396068572998px 0 rgba(0, 0, 0, 0.01), 0 11.14484977722168px 12.213534355163574px 0 rgba(0, 0, 0, 0.01), 0 26.832504272460938px 29.405485153198242px 0 rgba(0, 0, 0, 0.02), 0 89.00534057617188px 97.54010009765625px 0 rgba(0, 0, 0, 0.03);
+        @include tablet {
+            flex-direction: column;
+            gap: 0;
+        }
+        & .image {
+            background-color: $primary-200;
+            flex-shrink: 0;
+            @include laptop {
+                width: 50%;
+            }
+            @include tablet {
+                width: 100%;
+            }
+            & img {
+                @include laptop {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+                @include tablet {
+                    width: 100%;
+                    height: 571px;
+                    object-fit: cover;
+                }
+            }
+        }
+        & .content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 62px 32px;
+            @include laptop {
+                flex-shrink: 0;
+                width: 50%;
+            }
+            @include tablet {
+                width: 100%;
+                padding: 32px 24px 60px;
+            }
+            & .h3 {
+                margin-bottom: 16px;
+                max-width: 445px;
+            }
+            & p {
+                max-width: 563px;
+                margin-bottom: 40px;
+            }
+            & ul {
+                margin-bottom: 40px;
+                display: flex;
+                flex-direction: column;
+                row-gap: 16px;
+                & li {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 10px;
+                    color: $primary-900;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+.empowerment-section {
+    padding: 120px 0;
+    position: relative;
+    z-index: 10;
+    @include laptop {
+        padding: 80px 0;
+    }
+    @include tablet {
+        padding: 45px 0;
+    }
+    &::after {
+        z-index: -10;
+        width: 1336px;
+        height: 1065px;
+        background-image: url("../assets/images/svg/ring-large.svg");
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: -65px;
+        margin-left: 123px;
+    }
+    & .block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & .h3 {
+            max-width: 662px;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        & > p {
+            max-width: 829px;
+            text-align: center;
+        }
+        & .cards {
+            margin-top: 64px;
+            margin-bottom: 48px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            width: 100%;
+            @include tablet {
+                margin-top: 16px;
+                margin-bottom: 40px;
+                grid-template-columns: 1fr;
+            }
+            & li {
+                box-shadow: 0 4.030873775482178px 4.417396068572998px 0 rgba(0, 0, 0, 0.01), 0 11.14484977722168px 12.213534355163574px 0 rgba(0, 0, 0, 0.01), 0 26.832504272460938px 29.405485153198242px 0 rgba(0, 0, 0, 0.02), 0 89.00534057617188px 97.54010009765625px 0 rgba(0, 0, 0, 0.03);
+                & p {
+                    max-width: 368px;
+                }
+            }
+        }
+    }
+}
+
+.discover-section {
+    padding: 120px 0 0;
+    position: relative;
+    z-index: 0;
+    @include laptop {
+        padding: 80px 0 0;
+    }
+    @include tablet {
+        padding: 45px 0 0;
+    }
+    &::after {
+        z-index: -10;
+        width: 1530px;
+        height: 1530px;
+        background-image: url("../assets/images/svg/ring-mid.svg");
+        content: "";
+        position: absolute;
+        right: 50%;
+        top: -341px;
+        margin-right: -20px;
+    }
+    & .block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & .top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 580px;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 106px;
+            @include tablet {
+                margin-bottom: 34px;
+            }
+            & .h3 {
+                margin-bottom: 16px;
+            }
+            & p {
+                margin-bottom: 40px;
+            }
+        }
+        & .bottom {
+            position: relative;
+            @include tablet {
+                margin-bottom: -60px;
+            }
+            @include mobile {
+                align-self: flex-start;
+            }
+            & img {
+                @include tablet {
+                    border-radius: 12px;
+                }  
+            }
+            &::after {
+                z-index: -10;
+                width: 1020px;
+                height: 1020px;
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 50px;
+                transform: translateX(-50%);
+                border-radius: 1020px;
+                opacity: 0.6;
+                background: #5CADF8;
+                filter: blur(296.5116271972656px);
+            }
+            & img {
+                width: 1102px;
+                @include tablet {
+                    width: 548px;
+                    max-width: none;
+                }
+            }
+        }
+    }
+}
+
+.applyHome-section {
+    & .block {
+        display: flex;
+        background-color: $gray-900;
+        padding: 125px 80px;
+        border-radius: 40px 40px 0 0;
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+        @include tablet {
+            padding: 120px 20px 64px;
+        }
+        & .bg-rings {
+            position: absolute;
+            bottom: -203px;
+            right: -610px;
+            z-index: -10;
+            @include tablet {
+                transform: scale(0.7);
+            }
+        }
+        & .content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            & h2 {
+                color: $white;
+                max-width: 749px;
+                margin-bottom: 16px;
+                @include tablet {
+                    max-width: 335px;
+                }
+            }
+            & h6 {
+                color: $gray-25;
+                max-width: 440px;
+
+            }
+            & .button {
+                margin-top: 120px;
+                @include tablet {
+                    margin-top: 48px;
+                }
+            }
+        }
+    }
+}

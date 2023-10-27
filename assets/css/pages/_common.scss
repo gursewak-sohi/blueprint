@@ -1,0 +1,59 @@
+// Common SCSS
+main {
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+
+section {
+    position: relative;
+}
+
+.text-gray-800 {
+    color: $gray-800;
+}
+
+.sm-hidden {
+    display: block;
+    @include tablet {
+        display: none;
+    }
+}
+
+.sm {
+    display: none;
+    @include tablet {
+        display: block;
+    }
+}
+
+.xs-hidden {
+    display: block;
+    @include mobile {
+        display: none;
+    }
+}
+
+
+.xs {
+    display: none;
+    @include mobile {
+        display: block;
+    }
+}
+
+.card-item {
+    border-radius: 16px;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 24px 47px;
+    align-items: flex-start;
+    & h4 {
+        margin-top: 44px;
+        margin-bottom: 16px;
+    }
+    & img {
+        margin-left: -12px;
+    }
+}

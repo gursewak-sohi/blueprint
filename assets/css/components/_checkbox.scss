@@ -1,0 +1,38 @@
+// Radio SCSS
+.checkbox-unit {
+    & input {
+        display: none;
+    }
+    & label {
+        display: inline-flex;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        color: $white;
+        text-align: left;
+        @include mobile {
+            font-size: 16px;
+        }
+        & span {
+            border: 1px solid $white;
+            border-radius: 3px;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            margin-top: 2px;
+            position: relative;
+            background-color: transparent;
+            & svg {
+                transform: scale(0);
+            }
+        }
+    }
+    & input:checked+label svg {
+        transform: scale(1);
+    }
+}

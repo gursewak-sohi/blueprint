@@ -1,0 +1,318 @@
+// Header SCSS
+.header-section {
+    position: fixed;
+    top: 16px;
+    z-index: 90;
+    left: 0;
+    right: 0;
+    @include tablet {
+        top: 24px;
+    }
+    & .header-block {
+        padding: 7px 8px 7px 24px;
+        border-radius: 1000px;
+        border: 1px solid $gray-100;
+        box-shadow: 0 3.3060238361358643px 3.623039960861206px 0 rgba(0, 0, 0, 0.01), 0 9.140732765197754px 10.017241477966309px 0 rgba(0, 0, 0, 0.01), 0 22.007362365722656px 24.117658615112305px 0 rgba(0, 0, 0, 0.02), 0 73px 80px 0 rgba(0, 0, 0, 0.03);
+        width: 100%;
+        background-color: $white;
+        border-radius: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include tablet {
+            padding: 8px 30px 8px 24px;
+        }
+        & .btn-primary {
+            @include tablet {
+                display: none;
+            }
+        }
+        & .logo-block {
+            & img {
+                width: 139px;
+                @include tablet {
+                    width: 106px;
+                }
+            }
+        }
+        & .toggler {
+            padding: 0;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 10;
+            position: relative;
+            display: none;
+            outline: none;
+            width: 17px;
+            height: 32px;
+            transition: 0.6s all ease;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            @include tablet {
+                display: block;
+            }
+            & span {
+                border-radius: 2px;
+                width: 17px;
+                height: 1.5px;
+                display: block;
+                background-color: $primary-900;
+                position: relative;
+                transition: all 0.1s;
+                &::after,
+                &::before {
+                    border-radius: 2px;
+                    transition: all 0.3s;
+                    position: absolute;
+                    left: 0;
+                    content: "";
+                    height: 1.5px;
+                    background-color: $primary-900;
+                }
+                &::before {
+                    width: 17px;
+                    top: 6px;
+                }
+                &::after {
+                    width: 17px;
+                    bottom: 6px;
+                }
+            }
+        }
+        & .menu-wrapper {
+            display: flex;
+            align-items: center;
+            position: relative;
+            transition: all 0.6s ease;
+            @include tablet {
+                flex-direction: column;
+                position: absolute;
+                top: 0;
+                left: 20px;
+                right: 20px;
+                padding: 45px 18px 24px;
+                box-shadow: 0 3.3060238361358643px 3.623039960861206px 0 rgba(0, 0, 0, 0.01), 0 9.140732765197754px 10.017241477966309px 0 rgba(0, 0, 0, 0.01), 0 22.007362365722656px 24.117658615112305px 0 rgba(0, 0, 0, 0.02), 0 73px 80px 0 rgba(0, 0, 0, 0.03);
+                visibility: hidden;
+                opacity: 0;
+                transform: translateY(0px);
+                transform-origin: top;
+                transition: 1s all cubic-bezier(.08, 1.0, .07, 1);
+                background-color: $white;
+                justify-content: center;
+                overflow: hidden;
+                align-items: flex-start;
+                z-index: -1;
+                border-radius: 0 0 40px 40px;
+            }
+            & .header-wrapper {
+                @include tablet {
+                    display: flex;
+                    width: 100%;
+                    flex-direction: column;
+                }
+                & .social-menu {
+                    display: none;
+                    @include tablet {
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                        align-self: center;
+                        margin-top: 40px;
+                    }
+                    & li a {
+                        display: flex;
+                    }
+                }
+                & .menu {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    position: relative;
+                    @include tablet {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                    & > li {
+                        // position: relative;
+                        &:hover {
+                            & .sub-menu-wrapper {
+                                opacity: 1;
+                                visibility: visible;
+                                top: 100%;
+                            }
+                        }
+                        &:first-child {
+                            & .sub-menu-wrapper {
+                                & .sub-menu::before {
+                                    left: 267px;
+                                }
+                            }
+                        }
+                        &:nth-child(2) {
+                            & .sub-menu-wrapper {
+                                & .sub-menu::before {
+                                    left: 436px;
+                                }
+                            }
+                        }
+                        & > a {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            color: $gray-700;
+                            font-size: 14px;
+                            font-weight: 500;
+                            line-height: 20px;
+                            padding: 8px 16px;
+                            & img {
+                                position: relative;
+                                top: 1px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.active {
+            & .toggler {
+                & span {
+                    background-color: transparent;
+                    &::before {
+                        background-color: $primary-900;
+                        width: 17px;
+                        transform: translateY(-6px) translateX(0) rotate(-45deg);
+                    }
+                    &::after {
+                        background-color: $primary-900;
+                        width: 17px;
+                        transform: translateY(6px) translateX(0) rotate(45deg);
+                    }
+                }
+            }
+            & .menu-wrapper {
+                @include tablet {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: translateY(30px);
+                }
+            }
+        }
+    }
+}
+
+.menu {
+    & > li {
+        &:nth-child(2) {
+            & .sub-menu-wrapper { 
+                // width: 596px;
+                & .sub-menu {
+                    & .grids {
+                        grid-template-columns: repeat(2, 1fr);
+                        @include tablet {
+                            grid-template-columns: 1fr;
+                            gap: 0;
+                        }
+                    }
+                }
+            }
+        }
+       & .sub-menu-wrapper {
+            display: flex;
+            width: 884px;
+            position: absolute;
+            background-color: transparent;
+            top: 200%;
+            padding-top: 28px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            visibility: hidden;
+            transition: 300ms all cubic-bezier(.49, .025, .49, 1);
+            @include tablet {
+                opacity: 1;
+                visibility: visible; 
+                position: static; 
+                width: 100%;
+                padding-top: 0;
+                transform: none;
+            }
+            & .sub-menu {
+                width: 100%;
+                background-color: $white;
+                display: flex;
+                padding: 24px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 32px;
+                border-radius: 24px;
+                border-radius: 24px;
+                box-shadow: 0 3.3060238361358643px 3.623039960861206px 0 rgba(0, 0, 0, 0.01), 0 9.140732765197754px 10.017241477966309px 0 rgba(0, 0, 0, 0.01), 0 22.007362365722656px 24.117658615112305px 0 rgba(0, 0, 0, 0.02), 0 73px 80px 0 rgba(0, 0, 0, 0.03);
+                position: relative;
+                @include tablet { 
+                    box-shadow: none;
+                    padding: 0;
+                }
+                &::before {
+                    position: absolute;
+                    width: 26px;
+                    height: 26px;
+                    transform: rotate(45deg);
+                    border-radius: 4px;
+                    background-color: $white;
+                    content: '';
+                    top: -8px;
+                    left: 267px;
+                    @include tablet {
+                        display: none;
+                    }
+                }
+                & .button {
+                    @include tablet {
+                        display: none;
+                    }
+                }
+                & .grids {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 24px;
+                    width: 100%;
+                    @include tablet {
+                        grid-template-columns: 139px;
+                        gap: 0;
+                    }
+                    & li > a {
+                        display: flex;
+                        padding: 24px 16px;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 16px;
+                        font-size: 20px;
+                        font-weight: 500;
+                        line-height: 30px;
+                        color: $gray-700;
+                        border-radius: 8px;
+                        transition: 0.3s ease all;
+                        &:hover {
+                            background-color: $primary-200;
+                        }
+                        @include tablet {
+                            padding: 8px 16px 8px 35px;
+                            color: rgba($gray-700, 60%);
+                            font-size: 16px;
+                            font-weight: normal;
+                            line-height: 20px;
+                            
+                        }
+                        & img {
+                            @include tablet {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+

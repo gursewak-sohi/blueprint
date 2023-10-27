@@ -1,0 +1,95 @@
+//  Button SCSS
+.btn {
+    cursor: pointer;
+    font-family: $font-Inter;
+    border: none;
+    transition: $btn-transition;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: center;
+    flex-shrink: 0;
+    & svg {
+        flex-shrink: 0;
+        & * {
+            transition: $btn-transition;
+        }
+    }
+    &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
+
+.btn-xs {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 24px;
+    border-radius: 100px;
+    gap: 8px;
+}
+
+.btn-sm {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 8px 24px;
+    border-radius: 100px;
+}
+
+.btn-md {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 12px 40px;
+    border-radius: 100px;
+    column-gap: 8px;
+}
+
+.btn-primary {
+    background-color: $primary-700;
+    color: $white;
+    &:hover {
+        color: $white;
+    }
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+.btn-light {
+    background-color: $white;
+    color: $primary-800;
+    box-shadow: 0 26.832504272460938px 29.405485153198242px 0 rgba(0, 0, 0, 0.02), 0 89.00534057617188px 97.54010009765625px 0 rgba(0, 0, 0, 0.03);
+    &:hover {
+        color: $primary-800;
+    }
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+.btn-link  {
+    column-gap: 8px;
+    color: $primary-800;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    &:hover {
+        color: $primary-800;
+    }
+}
+
+.btn-link-light  {
+    column-gap: 8px;
+    color: $primary-700;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    &:hover {
+        color: $primary-700;
+    }
+}
+
+

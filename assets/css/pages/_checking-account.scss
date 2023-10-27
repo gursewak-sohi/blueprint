@@ -1,0 +1,154 @@
+// Checking Account
+.heroChecking-section {
+    background-color: $primary-500;
+    border-radius: 0 0 40px 40px;
+    z-index: 10;
+    & .block {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 172px 0 72px;
+        gap: 80px;
+        @include tablet {
+            padding: 120px 0 0;
+            flex-direction: column;
+            text-align: center;
+            gap: 0;
+        }
+        & .image {
+            @include tablet {
+                max-width: 285px;
+            }
+        }
+        & .content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 646px;
+            width: 100%;
+            @include tablet {
+                align-items: center;
+                position: relative;
+                top: 32px;
+            }
+            & h1 {
+                margin-bottom: 24px;
+                @include tablet {
+                    margin-bottom: 16px;
+                }
+            }
+            & .email-form {
+                margin-top: 48px;
+                max-width: 500px;
+                @include mobile {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+}
+
+.priority-section {
+    padding: 120px 0 0;
+    @include laptop {
+        padding: 100px 0 0;
+    }
+    @include tablet {
+        padding: 90px 0 0;
+    }
+    & .block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 120px;
+        @include laptop {
+            gap: 100px;
+        }
+        @include tablet {
+            gap: 0;
+        }
+        & .content {
+            width: 100%;
+            max-width: 580px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            & .h3 {
+                margin-bottom: 16px;
+            }
+            & .button {
+                margin-top: 40px;
+                @include tablet {
+                    margin-top: 16px;
+                }
+            }
+        }
+        & .image {
+            position: relative;
+            & img {
+                @include mobile {
+                    width: 792px;
+                    max-width: none;
+                    position: relative;
+                    right: -80px;
+                }
+            }
+            &::after {
+                z-index: -10;
+                width: 1020px;
+                height: 1020px;
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 50px;
+                transform: translateX(-50%);
+                border-radius: 1020px;
+                opacity: 0.6;
+                background: #4DDD96;
+                filter: blur(296.5116271972656px);
+            }
+        }
+    }
+}
+
+.key-section {
+    padding: 120px 0;
+    background-color: $gray-25;
+    @include laptop {
+        padding: 100px 0;
+    }
+    @include tablet {
+        padding: 90px 0;
+    }
+    & .h3 {
+        margin-bottom: 64px;
+        text-align: center;
+        @include tablet {
+            margin-bottom: 32px;
+        }
+    }
+    & .block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 64px;
+        @include tablet {
+            gap: 32px;
+        }
+        & .row {
+            grid-template-columns: repeat(3, 1fr);
+            display: grid;
+            gap: 16px;
+            @include mobile {
+                grid-template-columns: 1fr;
+            }
+            &:nth-child(3) {
+                grid-template-columns: repeat(2, 1fr);
+                @include mobile {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+    }
+}

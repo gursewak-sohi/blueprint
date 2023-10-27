@@ -1,0 +1,316 @@
+// About us page
+
+.heroAbout-section {
+    height: 587px;
+    background-color: rgba($primary-700, 30%);
+    padding-top: 140px;
+    border-radius: 0 0 40px 40px;
+    z-index: 10;
+    overflow: hidden;
+    @include tablet {
+        padding-top: 136px;
+        height: auto;
+        padding-bottom: 92px;
+    }
+
+    & .block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include tablet {
+            align-items: flex-start;
+        }
+        & .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 646px;
+            width: 100%;
+            @include tablet {
+                align-items: flex-start;
+                text-align: left;
+            }
+            @include mobile {
+                max-width: 335px;
+            }
+            & h1 {
+                margin-bottom: 24px;
+                @include tablet {
+                    margin-bottom: 12px;
+                }
+            }
+            & .button {
+                margin-top: 48px;
+                max-width: 500px;
+            }
+        }
+
+    }
+}
+
+.understand-section {
+    padding: 347px 0 283px;
+    margin-top: -142px;
+    margin-bottom: -60px;
+    @include laptop {
+        padding: 160px 0;
+        margin-top: -32px;
+        margin-bottom: -32px;
+    }
+    @include tablet {
+        padding: 0;
+        margin: 0;
+    }
+    & .bg {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: -20px;
+        z-index: -10;
+        @include tablet {
+            display: flex;
+            justify-content: center;
+        }
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            @include tablet {
+                width: 390px;
+                max-width: none;
+                margin: 0 auto;
+            }
+        }
+    }
+    & .block {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+        padding: 54px 22px;
+        text-align: center;
+        overflow: hidden;
+        z-index: 10;
+        max-width: 590px;
+        background-color: $white;
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 27.602px;
+        box-shadow: 0 2.851682662963867px 3.125131607055664px 0 rgba(0, 0, 0, 0.01), 0 7.884537220001221px 8.640588760375977px 0 rgba(0, 0, 0, 0.01), 0 18.982927322387695px 20.803207397460938px 0 rgba(0, 0, 0, 0.02), 0 62.96773147583008px 69.00572967529297px 0 rgba(0, 0, 0, 0.03);
+        @include tablet {
+            padding: 90px 40px;
+            gap: 16px;
+            background-color: transparent;
+            box-shadow: none;
+        }
+        @include mobile {
+            padding: 90px 20px;
+        }
+        & h2 {
+            max-width: 1097px;
+        }
+        & p {
+            max-width: 578px;
+        }
+    }
+}
+
+.empower-section {
+    padding: 32px 0 0;
+    @include tablet {
+        padding: 0;
+    }
+    & .block {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        padding: 66px 80px;
+        text-align: center;
+        overflow: hidden;
+        border-radius: 40px;
+        z-index: 10;
+        @include tablet {
+            padding: 90px 40px;
+            gap: 16px;
+        }
+        @include mobile {
+            padding: 90px 20px;
+        }
+        & h2 {
+            max-width: 1097px;
+        }
+        & p {
+            max-width: 578px;
+        }
+        & .bg {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            z-index: -10;
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.seamless-section {
+    padding: 120px 0 80px;
+    @include tablet {
+        padding: 90px 0;
+    }
+    & .block {
+        display: flex;
+        @include tablet {
+            flex-direction: column;
+        }
+        & .listing {
+            max-width: 620px;
+            padding: 60px 42px 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 54px;
+            @include tablet {
+                padding: 60px 0 28px;
+            }
+            & li {
+                display: flex;
+                gap: 20px;
+                align-items: flex-start;
+                & .text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                    & h5 {
+                        font-weight: 700;
+                        max-width: 336px;
+                    }
+                }
+            }
+        }
+        & .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            & .h3 {
+                margin-bottom: 16px;
+            }
+            & .counters {
+                margin-top: 122px;
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                @include laptop {
+                    margin-top: 60px;
+                }
+                @include tablet {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 20px;
+                }
+                & .unit {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    & .h4 {
+                        font-size: 42px;
+                        font-weight: 500;
+                        line-height: 62px;
+                    }
+                    & .p {
+                        line-height: 22px;
+                        max-width: 120px;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.welcome-section {
+    padding: 120px 0 0;
+    position: relative;
+    z-index: 0;
+    @include laptop {
+        padding: 100px 0 0;
+    }
+    @include tablet {
+        padding: 90px 0 0;
+    }
+    &::after {
+        z-index: -10;
+        width: 1530px;
+        height: 1530px;
+        background-image: url("../assets/images/svg/ring-mid.svg");
+        content: "";
+        position: absolute;
+        right: 50%;
+        top: -341px;
+        margin-right: -20px;
+    }
+    & .block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & .top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 106px;
+            @include tablet {
+                margin-bottom: 50px;
+            }
+            & .h3 {
+                margin-bottom: 16px;
+            }
+            & p {
+                margin-bottom: 40px;
+                max-width: 580px;
+            }
+        }
+        & .bottom {
+            position: relative;
+            width: 1426px;
+            @include laptop {
+                width: 120%;
+            }
+            @include tablet {
+                margin-bottom: -30px;
+            }
+
+            &::after {
+                z-index: -10;
+                width: 1020px;
+                height: 1020px;
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 50px;
+                transform: translateX(-50%);
+                border-radius: 1020px;
+                opacity: 0.6;
+                background: #4DDD96;
+                filter: blur(296.5116271972656px);
+            }
+            & img {
+                width: 1426px;
+                @include tablet {
+                    width: 928px;
+                    max-width: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,449 @@
+// Why Blueprint Page
+
+.heroCentered-section {
+    background-color: rgba($primary-800, 30%);
+    padding: 200px 0 153px;
+    border-radius: 0 0 40px 40px;
+    z-index: 10;
+    @include laptop {
+        padding: 174px 0 130px;
+    }
+    @include tablet {
+        padding: 154px 0 118px;
+    }
+    & .curves {
+        position: absolute;
+        z-index: -1;
+        top: 40px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        text-align: center;
+        opacity: 0.3;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1158px;
+        @include tablet {
+            width: 630px;
+            top: 130px;
+        }
+    }
+    & .block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 646px;
+            width: 100%;
+            @include mobile {
+                max-width: 335px;
+            }
+            & h1 {
+                margin-bottom: 24px;
+                @include tablet {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+        & .button {
+            margin-top: 48px;
+            max-width: 500px;
+            position: absolute;
+            bottom: -26px;
+            left: 50%;
+            transform: translateX(-50%);
+            @include mobile {
+                max-width: 335px;
+            }
+        }
+    }
+}
+
+.whyFeature-section {
+    padding: 146px 0 120px;
+    @include laptop {
+        padding: 100px 0;
+    }
+    @include tablet {
+        padding: 90px 0;
+    }
+    & .block {
+        z-index: 10;
+        position: relative;
+        & .curves {
+            position: absolute;
+            z-index: -1;
+            top: 0px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            @include tablet {
+                display: none;
+            }
+        }
+        & .cards {
+            display: flex;
+            column-gap: 32px;
+            row-gap: 32px;
+            flex-wrap: wrap;
+            @include mobile {
+               flex-direction: column;
+            }
+            & li {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                background-color: $primary-200;
+                padding: 24px;
+                border-radius: 16px;
+                &:nth-child(1) {
+                    width: calc(42% - 16px);
+                    @include mobile {
+                        width: 100%;
+                    }
+                }
+                &:nth-child(2) {
+                    width: calc(58% - 16px);
+                    @include mobile {
+                        width: 100%;
+                    }
+                }
+                &:nth-child(3) {
+                    width: calc(58% - 16px);
+                    @include mobile {
+                        width: 100%;
+                    }
+                }
+                &:nth-child(4) {
+                    width: calc(42% - 16px);
+                    @include mobile {
+                        width: 100%;
+                    }
+                }
+                & img {
+                    margin-bottom: 24px;
+                }
+                & .h5 {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+}
+
+.action-section {
+    padding: 146px 0 120px;
+    @include laptop {
+        padding: 100px 0;
+    }
+    @include tablet {
+        padding: 90px 0;
+    }
+    & .block {
+        z-index: 10;
+        position: relative;
+        & .curves {
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            @include tablet {
+                display: none;
+            }
+        }
+        & .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+            @include tablet {
+               display: flex;
+               flex-direction: column;
+            }
+            & li {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                & img {
+                    margin-bottom: 24px;
+                }
+                & .h5 {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+}
+
+.carry-section {
+    padding: 32px 0;
+    @include tablet {
+        padding: 0;
+    }
+    &.extra-spacing {
+        margin-top: 208px;
+        @include laptop {
+            margin-top: 140px;
+        }
+        @include tablet {
+            margin-top: 120px;
+        }
+    }
+    & .block {
+        background-color: rgba($primary-800, 30%);
+        border-radius: 40px;
+        padding: 120px 80px;
+        position: relative;
+        z-index: 10;
+        overflow: hidden;
+        @include laptop {
+            padding: 90px 80px;
+        }
+        @include tablet {
+            padding: 90px 20px;
+        }
+        & .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 32px;
+            @include tablet {
+                gap: 16px;
+            }
+            & h2 {
+                max-width: 852px;
+            }
+            & p {
+                max-width: 578px;
+            }
+        }
+        & .card-bg {
+            display: flex;
+            position: absolute;
+            z-index: -1;
+            justify-content: center;
+            align-items: flex-end;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            @include tablet {
+                padding: 0 30px;
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+.twoColumns-section {
+    padding: 120px 0;
+    @include laptop {
+        padding: 90px 0;
+    }
+    &.py-0 {
+        padding: 0;
+    }
+    &.pt-0 {
+        padding-top: 0;
+    }
+    & .block {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        @include mobile {
+            gap: 90px;
+        }
+        & .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 72px;
+            align-items: center;
+            @include tablet {
+                gap: 48px;
+            }
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+            }
+            &:nth-child(2n) {
+                flex-direction: column-reverse;
+            }
+            & .content {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                & h3 {
+                    margin-bottom: 16px;
+                }
+                &  .button {
+                    margin-top: 40px;
+                }
+                & ul {
+                    margin-top: 16px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 24px;
+                    & li {
+                        display: flex;
+                        align-items: center;
+                        gap: 16px;
+                    }
+                }
+            }
+            & .image {
+                flex-shrink: 0;
+                border-radius: 16px;
+                display: flex;
+                align-items: center;
+                @include mobile {
+                    height: 600px;
+                    background-color: $primary-200;
+                    margin: 0 -20px;
+                    border-radius: 0;
+                }
+                & img {
+                    @include mobile {
+                        width: 100%;
+                        max-width: 375px;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.apply-section {
+    & .block {
+        display: flex;
+        background-color: $gray-900;
+        padding: 157px 0 0 80px;
+        border-radius: 40px 40px 0 0;
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+        justify-content: space-between;
+        column-gap: 62px;
+        @include laptop {
+            padding: 120px 0 0 80px;
+            flex-direction: column;
+            row-gap: 62px;
+        }
+        @include tablet {
+            padding: 120px 20px 0;
+            row-gap: 34px;
+        }
+        & .bg-cards {
+            display: flex;
+            @include laptop {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+            @include tablet {
+                position: static;
+                margin-right: -20px;
+            }
+            & img {
+                margin-top: auto;
+                @include laptop {
+                    margin-left: auto;
+                    max-width: 400px;
+                }
+                @include mobile {
+                    max-width: none;
+                    width: 375px;
+                    margin: 0 -20px 0 auto;
+                }
+            }
+        }
+        & .content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 578px;
+            padding-bottom: 157px;
+            @include laptop {
+                padding-bottom: 120px;
+            }
+            @include tablet {
+                padding-bottom: 0;
+            }
+            & h2 {
+                color: $white;
+                margin-bottom: 32px;
+                @include tablet {
+                    margin-bottom: 16px;
+                }
+            }
+            & h6 {
+                color: $gray-25;
+            }
+            & .email-form {
+                max-width: 560px;
+                margin-top: 76px;
+                @include laptop {
+                    max-width: 500px;
+                }
+                @include tablet {
+                    margin-top: 48px;
+                }
+            }
+        }
+    }
+}
+
+
+.contact-section {
+    padding: 120px 0 120px;
+    @include laptop {
+        padding: 100px 0;
+    }
+    @include tablet {
+        padding: 90px 0;
+    }
+    & .block {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+        & .item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border: 1px solid #EBF3FA;
+            padding: 24px;
+            border-radius: 16px;
+            & img {
+                margin-bottom: 32px;
+            }
+            & h5 {
+                margin-bottom: 8px;
+            }
+            & .p {
+                margin-top: 16px;
+            }
+            & a {
+                color: #327EC7;
+                display: inline-block;
+            }
+        }
+    }
+}

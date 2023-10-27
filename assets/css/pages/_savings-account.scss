@@ -1,0 +1,155 @@
+// Saving Account SCSS
+
+.grow-section {
+    z-index: 10;
+    & .bg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 1440px;
+        height: 760px;
+        z-index: -10;
+        @include laptop {
+            width: 1200px;
+            height: auto;
+        }
+        @include tablet {
+            width: 992px;
+        }
+        @include mobile {
+            width: 555px;
+        }
+        & img {
+            max-width: none;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &.extra-spacing {
+        margin-top: 75px;
+        @include tablet {
+            margin-top: 20px;
+        }
+        @include mobile {
+            margin-top: 55px;
+        }
+    }
+    & .block {
+        height: 760px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        gap: 24px;
+        padding-bottom: 80px;
+        @include laptop {
+            height: 660px;
+        }
+        @include tablet {
+            height: 520px;
+        }
+        @include mobile {
+            height: 350px;
+            padding: 0;
+            gap: 12px;
+        }
+        & h2 {
+            max-width: 676px;
+        }
+        & p {
+            max-width: 676px;
+        }
+    }
+}
+
+.feature-section {
+    padding: 120px 0;
+    @include laptop {
+        padding: 100px 0;
+    }
+    @include tablet {
+        padding: 90px 0 0;
+    }
+    & .block {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        & .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            @include tablet {
+                grid-template-columns: 1fr;
+            }
+            &:first-child {
+                padding-right: 116px;
+                @include tablet {
+                    padding-right: 0;
+                }
+
+            }
+            &:nth-child(2) {
+                padding-left: 116px;
+                grid-template-columns: 1fr;
+                @include tablet {
+                    padding-left: 0;
+                }
+
+            }
+        }
+    }
+}
+
+.imagine-section {
+    padding: 110px 0 0;
+    @include tablet {
+        padding: 110px 0 0;
+    }
+    &.py-0 {
+        padding: 0;
+        @include tablet {
+            padding: 0 0 80px;
+        }
+    }
+    & .block {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        padding: 120px 80px;
+        text-align: center;
+        overflow: hidden;
+        border-radius: 40px;
+        z-index: 10;
+        @include tablet {
+            padding: 90px 40px;
+            gap: 16px;
+        }
+        @include mobile {
+            padding: 90px 20px;
+        }
+        & h2 {
+            max-width: 852px;
+        }
+        & p {
+            max-width: 807px;
+        }
+        & .bg {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            z-index: -10;
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
